@@ -1,8 +1,9 @@
+import { useNavigate } from 'react-router-dom'
 import { GraphOkls } from './GraphOkls/GraphOkls'
 import style from './OKLS.module.scss'
 
 export const OKLS = () => {
-
+    const navi = useNavigate()
     const incomingData = {
         "diagnosisConclusion": [
           {
@@ -47,7 +48,10 @@ export const OKLS = () => {
 
     return <div className={style.container}>
         <div className={style.headerWrapper}>
-            <span>График OKLS</span>
+            <span>График ОКЛС</span>
+            <div className={style.goBackWrapper} onClick={() => navi('/')}>
+                <span>Назад</span>
+            </div>
         </div>
         <div className={style.contentWrapper}>
             <GraphOkls data={incomingData.diagnosisChart.datasets['Пациент']} />

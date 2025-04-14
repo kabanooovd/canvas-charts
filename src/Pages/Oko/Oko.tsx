@@ -1,8 +1,8 @@
 import { useNavigate } from 'react-router-dom'
-import { GraphOth } from './GraphOth/GraphOth'
-import style from './OTH.module.scss'
+import { GraphOko } from './GraphOko/GraphOko'
+import style from './Oko.module.scss'
 
-export const OTH = () => {
+export const Oko = () => {
     const navi = useNavigate()
 
     const incomingData = {
@@ -25,31 +25,79 @@ export const OTH = () => {
           "datasets": {
             "Пациент": [
               {
-                "name": "Поиск новизны",
+                "name": "A",
                 "value": 12
               },
               {
-                "name": "Избегание вреда",
+                "name": "B",
                 "value": 4
               },
               {
-                "name": "Зависимость от...",
+                "name": "C",
                 "value": 11
               },
               {
-                "name": "Настойчивость",
+                "name": "D",
                 "value": 3
               },
               {
-                "name": "Самонаправляемость",
+                "name": "E",
                 "value": 8
               },
               {
-                "name": "Сотрудничество",
+                "name": "F",
                 "value": 2
               },
               {
-                "name": "Трансцентальность Я",
+                "name": "G",
+                "value": 9
+              },
+              {
+                "name": "H",
+                "value": 2
+              },
+              {
+                "name": "I",
+                "value": 8
+              },
+              {
+                "name": "J",
+                "value": 3
+              },
+              {
+                "name": "K",
+                "value": 7
+              },
+              {
+                "name": "L",
+                "value": 4
+              },
+              {
+                "name": "M",
+                "value": 6
+              },
+              {
+                "name": "O",
+                "value": 5
+              },
+              {
+                "name": "O1",
+                "value": 7
+              },
+              {
+                "name": "O2",
+                "value": 4
+              },
+              {
+                "name": "O3",
+                "value": 8
+              },
+              {
+                "name": "O4",
+                "value": 3
+              },
+              {
+                "name": "Q7",
                 "value": 9
               }
             ],
@@ -60,13 +108,13 @@ export const OTH = () => {
 
     return <div className={style.container}>
         <div className={style.headerWrapper}>
-            <span>График ОТХ</span>
+            <span>График ОКО</span>
             <div className={style.goBackWrapper} onClick={() => navi('/')}>
                 <span>Назад</span>
             </div>
         </div>
         <div className={style.contentWrapper}>
-            <GraphOth data={incomingData.diagnosisChart.datasets['Пациент']} />
+            <GraphOko data={incomingData.diagnosisChart.datasets['Пациент']} />
         </div>
     </div>
 }
