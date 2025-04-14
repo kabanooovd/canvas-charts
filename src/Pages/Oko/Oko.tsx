@@ -25,83 +25,80 @@ export const Oko = () => {
           "datasets": {
             "Пациент": [
               {
-                "name": "A",
+                "name": "НАРЦИССИЗМ",
+                "value": 43
+              },
+              {
+                "name": "ИНДИВИДУАЛИЗМ",
+                "value": 9
+              },
+              {
+                "name": "АМБИЦИОЗНОСТЬ",
+                "value": 9
+              },
+              {
+                "name": "КАТАСТРОФИЗАЦИЯ",
+                "value": 49
+              },
+              {
+                "name": "РАНИМОСТЬ",
+                "value": 16
+              },
+              {
+                "name": "ДОЛЖЕНСТВОВАНИЕ",
                 "value": 12
               },
               {
-                "name": "B",
-                "value": 4
+                "name": "ПЕРСОНАЛИЗАЦИЯ",
+                "value": 23
               },
               {
-                "name": "C",
-                "value": 11
+                "name": "ПЕССИМИЗМ",
+                "value": 13
               },
               {
-                "name": "D",
-                "value": 3
+                "name": "ПЕССИМИЗМ 777",
+                "value": 50
+              }
+            ],
+            "Норма": [
+              {
+                "name": "НАРЦИССИЗМ",
+                "value": 40
               },
               {
-                "name": "E",
-                "value": 8
-              },
-              {
-                "name": "F",
-                "value": 2
-              },
-              {
-                "name": "G",
-                "value": 9
-              },
-              {
-                "name": "H",
-                "value": 2
-              },
-              {
-                "name": "I",
-                "value": 8
-              },
-              {
-                "name": "J",
-                "value": 3
-              },
-              {
-                "name": "K",
-                "value": 7
-              },
-              {
-                "name": "L",
-                "value": 4
-              },
-              {
-                "name": "M",
-                "value": 6
-              },
-              {
-                "name": "O",
+                "name": "ИНДИВИДУАЛИЗМ",
                 "value": 5
               },
               {
-                "name": "O1",
-                "value": 7
-              },
-              {
-                "name": "O2",
-                "value": 4
-              },
-              {
-                "name": "O3",
-                "value": 8
-              },
-              {
-                "name": "O4",
+                "name": "АМБИЦИОЗНОСТЬ",
                 "value": 3
               },
               {
-                "name": "Q7",
-                "value": 9
+                "name": "КАТАСТРОФИЗАЦИЯ",
+                "value": 43
+              },
+              {
+                "name": "РАНИМОСТЬ",
+                "value": 36
+              },
+              {
+                "name": "ДОЛЖЕНСТВОВАНИЕ",
+                "value": 22
+              },
+              {
+                "name": "ПЕРСОНАЛИЗАЦИЯ",
+                "value": 43
+              },
+              {
+                "name": "ПЕССИМИЗМ",
+                "value": 11
+              },
+              {
+                "name": "ПЕССИМИЗМ 777",
+                "value": 30
               }
-            ],
-            "Норма": []
+            ]
           }
         }
       }
@@ -114,7 +111,7 @@ export const Oko = () => {
             </div>
         </div>
         <div className={style.contentWrapper}>
-            <GraphOko data={incomingData.diagnosisChart.datasets['Пациент']} />
+          <GraphOko data={incomingData.diagnosisChart} />
         </div>
     </div>
 }
