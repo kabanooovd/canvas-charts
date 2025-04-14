@@ -9,8 +9,8 @@ export const Default = () => {
             title: 'ОКЛС'
         },
         {
-            route: '/2',
-            title: 'Dva'
+            route: '/oth',
+            title: 'ОТХ'
         },
         {
             route: '/3',
