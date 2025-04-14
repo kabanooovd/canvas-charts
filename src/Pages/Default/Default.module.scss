@@ -1,0 +1,33 @@
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h3 {}
+
+    .routeWrapper {
+        background-color: rgb(247, 247, 255);
+        padding: 20px;
+        width: 500px;
+        text-align: center;
+        cursor: pointer;
+
+        transition: all 0.3s;
+
+        span {
+            font-size: 20px;
+            color: rgb(22, 2, 22);
+        }
+
+        &:hover {
+            background-color: rgb(152, 152, 246);
+
+            span {
+                color: #fff;
+            }
+        }
+    }
+}

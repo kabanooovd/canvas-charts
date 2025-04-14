@@ -1,0 +1,43 @@
+:root {
+  /* colors */
+  --c0: #ffffff;
+  --c1: #f8f8f8;
+  --c2: #a0bad1;
+  --c3: #007dee;
+  --c4: rgb(251, 86, 86);
+  --c5: #212C40;
+}
+
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  font-family: OpenSans;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--c0);
+  scroll-behavior: smooth;
+
+  *::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background-color: var(--c1);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: var(--c2);
+    border-radius: 5px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: var(--c3);
+  }
+}
