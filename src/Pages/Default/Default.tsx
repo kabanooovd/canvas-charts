@@ -5,8 +5,8 @@ export const Default = () => {
     const navi = useNavigate()
     const list = [
         {
-            route: '/1',
-            title: 'Odin'
+            route: '/okls',
+            title: 'ОКЛС'
         },
         {
             route: '/2',
