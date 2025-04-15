@@ -7,7 +7,8 @@ export const Default = () => {
         { route: '/okls', title: 'ОКЛС' },
         { route: '/oth', title: 'ОТХ' },
         { route: '/lf16', title: 'ЛФ16' },
-        { route: '/oko', title: 'OKO' }
+        { route: '/oko', title: 'OKO' },
+        { route: '/snake', title: 'Игра' }
     ]
 
     // TODO: сделать ui поприличнее

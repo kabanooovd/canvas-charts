@@ -1,7 +1,7 @@
 import { createBrowserRouter } from 'react-router-dom'
 
 import { Layout } from './Layout'
-import { Default, OKLS, OTH, LF16, Oko } from './Pages'
+import { Default, OKLS, OTH, LF16, Oko, Snake } from './Pages'
 import { JSX } from 'react'
 
 interface IRoutes {
@@ -16,6 +16,7 @@ export const routesConfig: IRoutes[] = [
     { route: '/oth', component: <OTH />, title: null },
     { route: '/lf16', component: <LF16 />, title: null },
     { route: '/oko', component: <Oko />, title: null },
+    { route: '/snake', component: <Snake />, title: null },
 ]
 
 export const router = createBrowserRouter([

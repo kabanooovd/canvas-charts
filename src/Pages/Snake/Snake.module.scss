@@ -1,0 +1,37 @@
+.container {
+    width: 100vw;
+    height: 100vh;
+    
+    .headerWrapper {
+        margin-top: 20px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+
+        span {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .goBackWrapper {
+            position: absolute;
+            left: 10px;
+            top: 0;
+
+            cursor: pointer;
+
+            span {
+                font-size: 14px;
+                color: rgb(103, 103, 244);
+            }
+        }
+    }
+
+    .contentWrapper {
+        max-width: 80vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 40px auto;
+    }
+}

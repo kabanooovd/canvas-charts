@@ -40,7 +40,16 @@ export const OKLS = () => {
                 "value": 3
               }
             ],
-            "Норма": []
+            "Норма": [
+              {
+                "name": "Ex/ln",
+                "value": 2
+              },
+              {
+                "name": "Se/Nt",
+                "value": 8
+              },
+            ]
           }
         }
       }
