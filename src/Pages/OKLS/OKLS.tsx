@@ -5,55 +5,56 @@ import style from './OKLS.module.scss'
 export const OKLS = () => {
     const navi = useNavigate()
     const incomingData = {
-        "diagnosisConclusion": [
-          {
-            "scale": "ОКО",
-            "result": null,
-            "addon": null,
-            "interpretations": [
-              "Обесценивание. Негативная оценка себя, своего прошлого и будущих перспектив, декларация безнадежности и обесценивание усилий, навешивание негативных ярлыков, блокировка деятельности из-за преувеличенно негативного прогноза. ",
-              "Долженствование. Повышенная моральная ответственность, стремление к обеспечению безопасности за счет морального контроля над окружающими. Проявления: преобладание моральных суждений и оценок в восприятии явлений и людей, представляющих потенциальное неудобство или опасность. ",
-              "Амбициозность. Максимализм и крайность в оценках, потребность в восхищении, выражающаяся через нарциссическую безупречность. Проявления: крайность в суждениях.",
-              "Индивидуализм. Настойчивое стремление отстаивать свою самооценку, связанное со страхом ошибиться. Негибкость суждений, преобладание эгоцентрических защитных суждений и бездействия, склонность явно или скрыто оспаривать мнение и предложения других людей «из принципа», отождествляя себя с предметом спора.  ",
-              "Нарциссизм. Декларация собственной исключительности, неконструктивное соперничество, не насыщаемая потребность в признании, восхищении, безупречности в глазах окружающих, безапелляционное признание собственной правоты как компенсация неуверенности и недостаточного самоуважения."
-            ]
-          }
-        ],
-        "diagnosisChart": {
-          "name": "OKO",
-          "datasets": {
-            "Пациент": [
-              {
-                "name": "Ex/ln",
-                "value": 12
-              },
-              {
-                "name": "Se/Nt",
-                "value": 4
-              },
-              {
-                "name": "Fe/Th",
-                "value": 11
-              },
-              {
-                "name": "Ju/Pe",
-                "value": 3
-              }
-            ],
-            "Норма": [
-              {
-                "name": "Ex/ln",
-                "value": 2
-              },
-              {
-                "name": "Se/Nt",
-                "value": 8
-              },
-            ]
-          }
+      "comment": null,
+      "diagnosisConclusion": [],
+      "diagnosisChart": {
+        "name": "Опросник когнитивных стилей (ОКС)",
+        "conclusionMarker": "OKLS",
+        "datasets": {
+          "Опросник когнитивных стилей (ОКС)": [
+            {
+              "name": "Ex/In",
+              "value": 7
+            },
+            {
+              "name": "Se/Nt",
+              "value": 8
+            },
+            {
+              "name": "Fe/Th",
+              "value": 9
+            },
+            {
+              "name": "Ju/Pe",
+              "value": 6
+            }
+          ],
+          "Опросник когнитивных стилей (ОКС)2": [
+            {
+              "name": "Ex/In",
+              "value": 7
+            },
+            {
+              "name": "Se/Nt",
+              "value": 6
+            },
+            {
+              "name": "Fe/Th",
+              "value": 5
+            },
+            {
+              "name": "Ju/Pe",
+              "value": 8
+            }
+          ]
         }
       }
+    }
 
+    const nestedDataSet = Object.values(incomingData.diagnosisChart.datasets)
+    const firstDataSet = nestedDataSet[0]
+    const secondDataSet = nestedDataSet[1]
+    const maxY = firstDataSet[0].value + secondDataSet[0].value
 
     return <div className={style.container}>
         <div className={style.headerWrapper}>
@@ -63,7 +64,7 @@ export const OKLS = () => {
             </div>
         </div>
         <div className={style.contentWrapper}>
-            <GraphOkls data={incomingData.diagnosisChart.datasets['Пациент']} />
+            <GraphOkls data={nestedDataSet[0]} maxY={maxY} />
         </div>
     </div>
 }
